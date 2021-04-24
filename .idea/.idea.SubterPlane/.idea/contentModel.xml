@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Projects\Unity\SubterPlane" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="BackgroundMovement.cs" t="Include" />
+          <e p="CameraFollow.cs" t="Include" />
+          <e p="GlobalLight.cs" t="Include" />
+          <e p="LiftTrail.cs" t="Include" />
+          <e p="Parrallax.cs" t="Include" />
+          <e p="Plane.cs" t="Include" />
+          <e p="PlanePhysics.cs" t="Include" />
+          <e p="RealisticPlanePhysics.cs" t="Include" />
+          <e p="SimplePlanePhysics.cs" t="Include" />
+          <e p="TerrainChunk.cs" t="Include" />
+          <e p="TerrainHandler.cs" t="Include" />
+          <e p="TerrainSection.cs" t="Include" />
+          <e p="Utils.cs" t="Include" />
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="SubterPlane.sln" t="IncludeFlat" />
+      <e p="Temp\Bin" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\muirh\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\muirh\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_SubterPlane.1173297642.00" t="ExcludeRecursive" />
+  </component>
+</project>
