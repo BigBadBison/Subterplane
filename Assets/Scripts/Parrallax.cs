@@ -1,25 +1,29 @@
 using UnityEngine;
 
 public class Parrallax : MonoBehaviour {
-    private Transform parent;
-    private Vector3 parentStartPos;
-    private Vector3 targPos;
+    [SerializeField] private Transform tracked;
+    [SerializeField] private Transform[] backgrounds;
+    [SerializeField] private float[] xFactor;
+    
+    private Vector3 trackedStartPos;
     private float startZ;
-
-    [SerializeField] private float xFactor = 0;
-    [SerializeField] private float yFactor = 0;
     
     private void Awake() {
-        parent = transform.parent.transform;
-        parentStartPos = parent.position;
+        trackedStartPos = tracked.position;
         startZ = transform.localPosition.z;
     }
 
     void LateUpdate() {
-        targPos = parent.position - parentStartPos;
-        targPos.x *= xFactor;
-        targPos.y *= yFactor;
-        targPos.z = startZ;
-        transform.localPosition = Vector3.Lerp(transform.localPosition, targPos, 1f * Time.deltaTime);
+        Vector3 offset = tracked.position - trackedStartPos;
+        for (int i = 0; i < xFactor.Length; i++) {
+            Vector3 targPos = offset;
+            targPos.x *= xFactor[i];
+            targPos.z = startZ;
+            if (Vector3.Distance(backgrounds[i].localPosition, targPos) > 10f) {
+                backgrounds[i].localPosition = targPos;
+            }
+            // backgrounds[i].localPosition = Vector3.Lerp(backgrounds[i].localPosition, targPos, 1f * Time.deltaTime);
+            backgrounds[i].localPosition = targPos;
+        }
     }
 }

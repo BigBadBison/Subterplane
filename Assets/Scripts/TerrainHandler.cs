@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TerrainHandler : MonoBehaviour
 {
@@ -18,13 +16,13 @@ public class TerrainHandler : MonoBehaviour
     private float spacing = 1f;
     
     [SerializeField]
-    private float angle = -5;
+    private float startAngle = -5;
     [SerializeField]
     private float angleFactor = 1;
     [SerializeField]
     private float featureFactor = 0.5f;    
     [SerializeField]
-    private float height = 17.5f;
+    private float startHeight = 17.5f;
     [SerializeField]
     private float heightFactor = 2f;
     
@@ -34,41 +32,71 @@ public class TerrainHandler : MonoBehaviour
     private float angleDifficulty = 0.15f;
     
     private Camera cam;
+
+    TerrainChunk[] terrainChunks;
     
     int pos = 0;
-    TerrainChunk[] terrainChunks;
     int cur_idx = 0;
+    private float angle;
+    private float height;
     
+    private int[] perlinOffsets;
     float[] groundPoints;
     float[] ceilingPoints;
 
     private Vector3 nextStartPos;
+
+    public static int Seed {
+        get => seed;
+        set => seed = value;
+    }
+
+    private static int seed;
     
     private void Awake() {
         TerrainSection.Spacing = spacing;
-        
-        UnityEngine.Random.InitState(0);
+        seed = Random.Range(100, 10000);
         cam = Camera.main;
         terrainChunks = new TerrainChunk[chunks];
         groundPoints = new float[terrainLength];
         ceilingPoints = new float[terrainLength];
-        ceilingPoints[terrainLength - 1] = height;
-        nextStartPos = Vector3.zero;
-
+        perlinOffsets = new[] {0, 0};
         for (int i = 0; i < chunks; i++) {
             TerrainChunk instance = Instantiate(terrainPrefab, transform, true);
             terrainChunks[i] = instance;
-            Generate();
         }
+        Restart();
     }
     
     void Update()
     {
-        if(cam.transform.position.x + cam.orthographicSize * 2 >= pos * spacing) {
+        if(cam.transform.position.x - cam.orthographicSize * 2 >= (pos - terrainLength * 3) * spacing) {
             Generate();
         }
     }
 
+    public void Restart() {
+        pos = 0;
+        cur_idx = 0;
+
+        UnityEngine.Random.InitState(seed);
+        for (int i = 0; i < perlinOffsets.Length; i++) {
+            perlinOffsets[i] = Random.Range(0, 255 * 255);
+        }
+        ceilingPoints[terrainLength - 1] = height;
+        nextStartPos = Vector3.zero;
+        
+        height = 20f;
+        angle = 0f;
+        
+        for (int i = 0; i < chunks; i++) {
+            Generate();
+        }
+
+        angle = startAngle;
+        height = startHeight;
+    }
+    
     
     void Generate() {
         float slope = Mathf.Tan((angle + RandomGetNextPoint(angleFactor)) * Mathf.Deg2Rad);
@@ -106,6 +134,7 @@ public class TerrainHandler : MonoBehaviour
     
     float GetPerlinPoint(int pos, int ch) {
         float scale = 255f;
+        pos += perlinOffsets[ch];
         float u = (pos % scale) / scale;
         float v = pos / scale;
         var c = noiseSource.GetPixelBilinear(u, v);

@@ -20,14 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="014b2fff-bbac-4c14-8ea3-423944f52d47" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TerrainSection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/TerrainSection.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Utils.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SubterPlane/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SubterPlane/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SubterPlane/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SubterPlane/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Terrain Chunk.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Terrain Chunk.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackgroundMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BackgroundMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GlobalLight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GlobalLight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LiftTrail.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LiftTrail.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Parrallax.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Parrallax.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Plane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Plane.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealisticPlanePhysics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RealisticPlanePhysics.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RealisticPlanePhysics.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RealisticPlanePhysics.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimplePlanePhysics.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SimplePlanePhysics.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TerrainHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TerrainHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/background.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background_normal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/background_normal.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/grid.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
@@ -42,9 +62,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Parrallax.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LiftTrail.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameOverDisplay.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DontDestroy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GlobalLight.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SimplePlanePhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SoundToggle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreTracker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TiledBackground.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Plane.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -54,19 +79,32 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Utilities.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Utils.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BezierTerrain.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/ReadonlyAttribute.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerrainSegment.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerrainChunk.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SimplePlanePhysics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlanePhysics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerrainSection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Plane.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/RealisticPlanePhysics.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LiftTrail.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Curves/SimpleLift.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ExperimentalPlanePhysics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LiftTrailSprite.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LightFlicker.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DontDestroy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ScoreTracker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GlobalLight.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundToggle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RealisticPlanePhysics.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameOverDisplay.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerrainHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TrailController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Parrallax.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CameraFollow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/TiledBackground.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Plane.cs" />
       </list>
     </option>
   </component>
@@ -109,7 +147,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1619235071437</updated>
-      <workItem from="1619235086030" duration="39652000" />
+      <workItem from="1619235086030" duration="39938000" />
+      <workItem from="1619331721558" duration="37106000" />
     </task>
     <servers />
   </component>
@@ -128,14 +167,19 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1619258288465">
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1619349459280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619258288465" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619349459280" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1619356168338">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619356168338" />
   </component>
 </project>

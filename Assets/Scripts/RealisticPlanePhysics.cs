@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RealisticPlanePhysics : PlanePhysics {
 
-    
     private float stallAngle = 15f;
     private float criticalAngle = 20f;
     private float maxLiftCoefficient = 1.2f;
@@ -14,9 +13,8 @@ public class RealisticPlanePhysics : PlanePhysics {
     [SerializeField]
     private AnimationCurve dragCurve;
 
-    private LiftTrail lTrail;
+    private TrailController trailController;
     
-    // debugging
     [SerializeField]
     private float lift;
     [SerializeField]
@@ -30,23 +28,10 @@ public class RealisticPlanePhysics : PlanePhysics {
     protected override void Awake() {
         base.Awake();
 
-        lTrail = GetComponentInChildren<LiftTrail>();
-        lTrail.MaxLift = maxLiftCoefficient;
-        
-        liftCurve = new AnimationCurve();
-        liftCurve.preWrapMode = WrapMode.PingPong;
-        liftCurve.postWrapMode = WrapMode.PingPong;
-        liftCurve.AddKey(new Keyframe(0, 0, 0, 1 / 10f));
-        liftCurve.AddKey(new Keyframe(stallAngle, maxLiftCoefficient, 0, 0));
-        liftCurve.AddKey(new Keyframe(criticalAngle, 0.8f, 0, 0));
-        liftCurve.AddKey(new Keyframe(45f, 1.1f, 0, 0));
-        liftCurve.AddKey(new Keyframe(90f, 0f, -1.4f / 45f, 0));
+        trailController = GetComponentInChildren<TrailController>();
 
-        dragCurve = new AnimationCurve();
-        dragCurve.preWrapMode = WrapMode.PingPong;
-        dragCurve.postWrapMode = WrapMode.PingPong;
-        dragCurve.AddKey(new Keyframe(0, 0, 0, 0));
-        dragCurve.AddKey(new Keyframe(90f, 2f,0, 0));
+        liftCurve = AeroCurves.RealisticLift(stallAngle, criticalAngle, maxLiftCoefficient);
+        dragCurve = AeroCurves.RealisticDrag(2f);
     }
 
     public override void ApplyForces() {
@@ -58,19 +43,17 @@ public class RealisticPlanePhysics : PlanePhysics {
 
     void ApplyLift() {
         lift = CalculateLift();
-        lift *= Vector2.Dot(transform.up, Vector2.up);
-        rb.AddForce(Vector2.up * lift);
-        rb.AddRelativeForce(Vector2.up * CalculateLift());
+        trailController.CurrentLift(lift);
+        rb.AddForce(Vector2.Perpendicular(rb.velocity).normalized * lift);
     }
     
     void ApplyDrag() {
         drag = CalculateDrag();
-        //rb.AddRelativeForce(Vector2.left * CalculateDrag());
+        rb.AddForce(-rb.velocity.normalized * drag);
     }
-    
+
     float CalculateLift() {
         float cLift = Mathf.Sign(angleOfAttack) * liftCurve.Evaluate(angleOfAttack);
-        lTrail.CurrentLift(cLift);
         return cLift * aeroFactor * vRel * vRel;
     }
 
@@ -79,10 +62,14 @@ public class RealisticPlanePhysics : PlanePhysics {
         return Mathf.Sign(vRel) * cDrag * aeroFactor * vRel * vRel;
     }
 
-    private void OnDrawGizmos() {
-        Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, rb.transform.up * lift / 100);
-        Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, -rb.transform.right * drag / 100);
+    public void Disable() {
+        
     }
+
+//     private void OnDrawGizmos() {
+//         Gizmos.color = Color.red;
+//         Gizmos.DrawRay(transform.position, Vector2.Perpendicular(rb.velocity).normalized * lift);
+//         Gizmos.color = Color.blue;
+//         Gizmos.DrawRay(transform.position, -rb.velocity.normalized * drag);
+//     }
 }

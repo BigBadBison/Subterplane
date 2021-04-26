@@ -5,8 +5,7 @@ public class GlobalLight : MonoBehaviour {
     [SerializeField]
     private float intensityGradient;
 
-    [SerializeField]
-    private GameObject lights;
+    public static Plane plane;
     
     private Camera cam;
     private Light2D light;
@@ -20,8 +19,6 @@ public class GlobalLight : MonoBehaviour {
 
     void Update() {
         light.intensity = 1 - cam.transform.position.x * intensityGradient;
-        if (light.intensity < 0.5f) {
-            lights.SetActive(true);
-        }
+        plane.SetLights(light.intensity < 0.5f);
     }
 }
